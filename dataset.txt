@@ -1,0 +1,3 @@
+https://catalog.data.gov/dataset/walkability-index1
+
+I chose the walkability index because I love to walk places and prefer to live in walkable communities. I think I might analyze how walkable a community is based on the proportions of different income levels within. I could also look at how the amount of car ownership influences the walkability score.  I could also examine how the area of the census block influences the walkability score.
