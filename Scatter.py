@@ -33,27 +33,26 @@ def main():
 
     plt.figure(figsize = (12,8))
 
-    plt.scatter(x, df.loc["United States of America"])
-    make_linReg(df, "United States of America")
+    plt.scatter(x, df.loc["United Kingdom of Great Britain and Northern Ireland"],s=34)
+    make_linReg(df, "United Kingdom of Great Britain and Northern Ireland")
 
 
-    plt.scatter(x, df.loc["Mexico"])
-    make_linReg(df, "Mexico")
+    plt.scatter(x, df.loc["France"],s=34)
+    make_linReg(df, "France")
 
-    plt.scatter(x, df.loc["Canada"])
-    make_linReg(df, "Canada")
+    plt.scatter(x, df.loc["Ireland"],s=34)
+    make_linReg(df, "Ireland")
 
 
-    plt.xticks(np.array([2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022]))
-    plt.yticks(np.array([0,10,20,30,40,50,60,70,80,90,100]))
+    #plt.xticks(np.array([2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022]))
+    #plt.yticks(np.array([0,10,20,30,40,50,60,70,80,90,100]))
     #plt.yticks(np.arange(90,100))
-
-    plt.title("Percentage of 1-year-olds Who Have Received Three Doses of Polio Vaccine vs Time",fontsize=20)
+    plt.title("Percentage of 1-year-olds Who Have Received \n Three Doses of Polio Vaccine vs Time",fontsize=19)
     plt.xlabel("Years",fontsize=20)
     plt.ylabel("Percentage of Vaccinated 1 Year Olds", fontsize=20)
-    plt.legend(["United States of America","United States of America Regression","Mexico","Mexico Regression","Canada","Canada Regression"])
-    
+    plt.legend(["Great Britain and Northern Ireland","Great Britain and Northern Ireland Regression","France","France Regression","Ireland","Ireland Regression"])
     plt.show()
+    
 
 if __name__ == '__main__':
     main()
