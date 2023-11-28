@@ -20,7 +20,9 @@ df = df[df.columns[::-1]]
 df.loc['mean'] = df.mean(axis = 0)
 df.loc['median'] = df.median(axis = 0)
 
+
 plt.style.use('Solarize_Light2')
+plt.figure(figsize = (9,7))
 plt.hist(df[2021], color = '#6c71c4')
 plt.title("Percentages of 1-year-olds who have received \n three doses of polio vaccine in 2021 Globally",fontsize=19)
 plt.xlabel("Percentage of Vaccinated 1-year-olds",fontsize=20)
