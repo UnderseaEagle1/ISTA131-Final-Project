@@ -1,3 +1,12 @@
+"""
+Name: Erick Yoakum
+SL: Chase Hult
+
+ISTA 131
+Final Project
+
+This program creates a plot comparing the percentages of infants who get the polio vaccine in Britain, France, and Ireland
+"""
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -5,7 +14,7 @@ import statsmodels.api as sm
 
 def get_ols_parameters(s):
     '''
-    gets statistical parameters from a series
+    Gets statistical parameters from a series
 
     parameters: s, a series
     returns: List
@@ -17,12 +26,22 @@ def get_ols_parameters(s):
     return [results.params.loc['x1'], results.params.loc['const'], results.rsquared, results.pvalues['x1']]
 
 def make_linReg(df, cName):
+    '''
+    Plots a linear regression line
+
+    parameters: df, a dataframe
+                cName, a string
+    returns: None
+    '''
     x = np.arange(2000,2022)
     params = get_ols_parameters(df.loc[cName])
     y = params[0] * x + params[1]
     plt.plot(x,y,linestyle = '--')
 
 def main():
+    '''
+    Generates a scatter plot with linear regression lines
+    '''
     #plt.style.use('fivethirtyeight')
     plt.style.use('Solarize_Light2')
 
@@ -48,8 +67,6 @@ def main():
 
     plt.xticks(np.array([2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022]))
     
-    #plt.yticks(np.array([0,10,20,30,40,50,60,70,80,90,100]))
-    #plt.yticks(np.arange(90,100))
     plt.title("Percentage of 1-Year-Olds Who Have Received \n Three Doses of Polio Vaccine from 2000-2021 Across Britain, France, & Ireland",fontsize=19)
     plt.xlabel("Years (2000-2021)",fontsize=20)
     plt.ylabel("Percentage of Vaccinated 1 Year Olds", fontsize=20)

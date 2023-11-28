@@ -1,3 +1,12 @@
+"""
+Name: Erick Yoakum
+SL: Chase Hult
+
+ISTA 131
+Final Project
+
+This program creates a plot comparing the average percentage of vaccinated infants from 193 countries for 6 diffrent vaccines
+"""
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

@@ -1,3 +1,12 @@
+"""
+Name: Erick Yoakum
+SL: Chase Hult
+
+ISTA 131
+Final Project
+
+This program creates a histogram comparing frequency of the percentages of infants who get the polio vaccine from all 193 countries in the dataset
+"""
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
