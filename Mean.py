@@ -36,13 +36,10 @@ df.loc['MCV2-Mean'] = MCV2.loc["mean"]
 df.loc['Pol3-Mean'] = Pol3.loc["mean"]
 
 
-
-
-
-
-
 df.columns = [2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001,2000]
 df = df[df.columns[::-1]]
+plt.style.use('Solarize_Light2')
+plt.figure(figsize = (12,8))
 
 plt.plot(df.loc['DTP3-Mean'])
 plt.plot(df.loc['HepB3-Mean'])
@@ -50,10 +47,12 @@ plt.plot(df.loc['Hib3-Mean'])
 plt.plot(df.loc['MCV1-Mean'])
 plt.plot(df.loc['MCV2-Mean'])
 plt.plot(df.loc['Pol3-Mean'])
+
 plt.xticks(np.array([2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022]))
 plt.legend(['DTP3','HepB3','Hib3','MCV1','MCV2','Pol3'])
-
-
+plt.title("Average Percentage of Vaccinated 1-Year-Olds from 2000-2021 Globally", fontsize=19)
+plt.xlabel("Years (2000-2021)",fontsize=20)
+plt.ylabel("Mean Percentage of Vaccinated \n 1-Year-Olds", fontsize=20)
 
 
 plt.show()

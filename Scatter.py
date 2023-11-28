@@ -23,6 +23,8 @@ def make_linReg(df, cName):
     plt.plot(x,y,linestyle = '--')
 
 def main():
+    #plt.style.use('fivethirtyeight')
+    plt.style.use('Solarize_Light2')
 
     
     df =  pd.read_csv('Pol3.csv', index_col= 0)
@@ -44,11 +46,12 @@ def main():
     make_linReg(df, "Ireland")
 
 
-    #plt.xticks(np.array([2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022]))
+    plt.xticks(np.array([2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022]))
+    
     #plt.yticks(np.array([0,10,20,30,40,50,60,70,80,90,100]))
     #plt.yticks(np.arange(90,100))
-    plt.title("Percentage of 1-year-olds Who Have Received \n Three Doses of Polio Vaccine vs Time",fontsize=19)
-    plt.xlabel("Years",fontsize=20)
+    plt.title("Percentage of 1-Year-Olds Who Have Received \n Three Doses of Polio Vaccine from 2000-2021 Across Britain, France, & Ireland",fontsize=19)
+    plt.xlabel("Years (2000-2021)",fontsize=20)
     plt.ylabel("Percentage of Vaccinated 1 Year Olds", fontsize=20)
     plt.legend(["Great Britain and Northern Ireland","Great Britain and Northern Ireland Regression","France","France Regression","Ireland","Ireland Regression"])
     plt.show()
